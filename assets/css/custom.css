@@ -1,1 +1,76 @@
+/* assets/css/custom.css
+   Research-backed readable defaults:
+   - max-width 66ch => ~66 characters per line
+   - slightly larger base font for comfortable reading
+   - modest line-height for density + readability
+*/
+
+:root{
+  --base-font-size-desktop: 18px;  /* body font size on desktop */
+  --base-font-size-mobile: 16px;   /* body on small screens */
+  --body-line-height: 1.45;
+  --content-max-measure: 66ch;     /* keeps ~66 chars per line */
+  --content-gap: 1rem;             /* spacing between blocks */
+  --heading-scale: 1.2;            /* relative heading scale */
+  --max-content-width: 90ch;       /* fallback for very large fonts */
+  --font-stack: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* Body base */
+body {
+  font-family: var(--font-stack);
+  font-size: var(--base-font-size-desktop);
+  line-height: var(--body-line-height);
+  color: #121212;
+  background: #fff;
+}
+
+/* Make content column narrower for readability */
+.main-content, .post-content, article, .page__content {
+  max-width: var(--content-max-measure);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Headings — denser but readable */
+h1, h2, h3, h4 { 
+  line-height: 1.2;
+  margin-top: calc(var(--content-gap) * 1.1);
+  margin-bottom: calc(var(--content-gap) * 0.6);
+}
+
+h1 { font-size: calc(var(--base-font-size-desktop) * 2.0); }
+h2 { font-size: calc(var(--base-font-size-desktop) * 1.4); }
+h3 { font-size: calc(var(--base-font-size-desktop) * 1.15); }
+
+/* Paragraph spacing and compactness */
+p {
+  margin-top: 0;
+  margin-bottom: calc(var(--content-gap) * 0.95);
+}
+
+/* Reduce excessive whitespace in site chrome (sidebars, headers) */
+.site-header, .site-footer, .sidebar {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+/* Smaller metadata / bylines */
+.post-meta, .byline, .post-date {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  :root { --base-font-size-desktop: var(--base-font-size-mobile); }
+  .main-content, .post-content {
+    max-width: 42ch;  /* mobile narrower measure to avoid very long lines on some phones */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
