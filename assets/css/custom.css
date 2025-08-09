@@ -155,3 +155,10 @@ p {
     max-width: 1400px !important;
   }
 }
+
+/* Override the default max-width for the wrapper */
+.wrapper {
+  max-width: 100% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
