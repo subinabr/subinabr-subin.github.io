@@ -90,3 +90,18 @@ p {
     max-width: 1250px !important;
   }
 }
+
+/* Make main blog post content wider and aligned left */
+.page__content {
+  max-width: 1100px !important; /* widen content container */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: left !important; /* ensure text is left aligned */
+}
+
+/* For really large screens, allow even wider content */
+@media (min-width: 1600px) {
+  .page__content {
+    max-width: 1300px !important;
+  }
+}
