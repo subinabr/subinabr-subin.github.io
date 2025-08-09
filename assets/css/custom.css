@@ -105,3 +105,30 @@ p {
     max-width: 1300px !important;
   }
 }
+
+/* Widen individual blog post content */
+.post-content {
+  max-width: 1100px !important;   /* widen from default ~700-800px */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: left !important;
+}
+
+/* For very large screens */
+@media (min-width: 1600px) {
+  .post-content {
+    max-width: 1300px !important;
+  }
+}
+
+.post-content p {
+  line-height: 1.35 !important;
+  font-size: 17px !important;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  margin-top: 1.2rem !important;
+  margin-bottom: 0.6rem !important;
+}
