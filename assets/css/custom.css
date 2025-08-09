@@ -132,3 +132,26 @@ p {
   margin-top: 1.2rem !important;
   margin-bottom: 0.6rem !important;
 }
+
+/* Widen the outer wrapper on article pages */
+.wrapper {
+  max-width: 1250px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+/* Also widen the main container */
+.container {
+  max-width: 1250px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Optional: For very large screens */
+@media (min-width: 1600px) {
+  .wrapper, .container {
+    max-width: 1400px !important;
+  }
+}
