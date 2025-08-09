@@ -109,6 +109,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+include:
+  - assets/css/custom.css      
 
 category_archive:
   type: liquid
