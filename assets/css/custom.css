@@ -23,6 +23,7 @@ body {
   line-height: var(--body-line-height);
   color: #121212;
   background: #fff;
+  background-color: #ffdead !important; 
 }
 
 /* Make content column narrower for readability */
